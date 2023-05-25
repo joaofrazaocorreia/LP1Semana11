@@ -7,14 +7,15 @@ namespace GuessTheNumber
 {
     public class Controller
     {
+        private int targetNumber;
+
+        public Controller(int targetNumber)
+        {
+            this.targetNumber = targetNumber;
+        }
+        
         public void Run(IView view)
         {
-            // Generate a random number
-            Random random = new Random();
-
-            // Generate a number between 1 and 100
-            int targetNumber = random.Next(1, 101);
-
             int guess;
             int attempts = 0;
             bool guessedCorrectly = false;
