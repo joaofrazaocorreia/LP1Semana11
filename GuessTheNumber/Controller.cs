@@ -7,8 +7,6 @@ namespace GuessTheNumber
 {
     public class Controller
     {
-        private IView view;
-
         public void Run(IView view)
         {
             // Generate a random number
