@@ -19,16 +19,16 @@ namespace GuessTheNumber
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        public void CheckGuess(int guess, int targetNumber, int attempts)
+        public void CorrectGuess(int attempts)
         {
-            if (guess == targetNumber)
-            {
-                Console.WriteLine(
-                    "Congratulations! You guessed the number correctly!");
-                Console.WriteLine("Number of attempts: " + attempts);
-                guessedCorrectly = true;
-            }
-            else if (guess < targetNumber)
+            Console.WriteLine(
+                        "Congratulations! You guessed the number correctly!");
+                    Console.WriteLine("Number of attempts: " + attempts);
+        }
+
+        public void WrongGuess(int guess, int targetNumber)
+        {
+            if (guess < targetNumber)
             {
                 Console.WriteLine("Too low! Try again.");
             }

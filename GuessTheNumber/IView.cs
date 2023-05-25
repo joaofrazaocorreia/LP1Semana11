@@ -11,7 +11,8 @@ namespace GuessTheNumber
 
         int Guess();
 
-        void CheckGuess(int guess, int targetNumber, int attempts);
+        void CorrectGuess(int attempts);
+        void WrongGuess(int guess, int targetNumber);
 
         void ThankYou();
     }
