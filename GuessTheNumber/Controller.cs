@@ -9,9 +9,11 @@ namespace GuessTheNumber
     {
         private int targetNumber;
 
-        public Controller(int targetNumber)
+        private RandomNumber randNum = new RandomNumber();
+
+        public Controller()
         {
-            this.targetNumber = targetNumber;
+            targetNumber = randNum.GetRandomNumber();
         }
         
         public void Run(IView view)
